@@ -1,3 +1,7 @@
+<p align="left">
+  <img width="460" height="300" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/starbucks.jfif?raw=true">
+</p>
+
 ### Nano Degree Capstone Project
 ## How can Starbucks use data to inform their marketing strategy?
 
