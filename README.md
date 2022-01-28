@@ -108,19 +108,19 @@ As the classes aren't too imbalanced, I made a basic Logistic Regression model (
 # Baseline model
 I didn't do anything exciting coding wise here for Logistic Regression, so the most important thing is the performance and feature ranking:
 <p align="left">
-  <img width="800" height="200" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/modelling1.jpg?raw=true">
+  <img  src="https://github.com/jennymcphail/github.starbucks.io/blob/main/modelling1.jpg?raw=true">
 </p>
 
 The accuracy isn't too bad, performance on the test data is nearly as good as training. And the feature rank supports my earlier hypothesis - likelihood to complete is predicted by both customer profile and offer features.
 
 The Decision Tree turned out massively over-fitted to the training data:
 <p align="left">
-  <img width="800" height="200" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/modelling2.jpg?raw=true">
+  <img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/modelling2.jpg?raw=true">
 </p>
 
 # Tuning
 <p align="left">
-  <img width="800" height="200" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/modelling3.jpg?raw=true">
+  <img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/modelling3.jpg?raw=true">
 </p>
 
 The scores have improved and the model is still performing equally well for training and test data.
@@ -129,7 +129,7 @@ The scores have improved and the model is still performing equally well for trai
 
 As my data included all the offers in it, I wanted to check that it performs well across them all.
 <p align="left">
-  <img width="800" height="200" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/modelling4.jpg?raw=true">
+  <img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/modelling4.jpg?raw=true">
 </p>
 Fairly similar, although there might be an argument for building separate models per offer if Starbucks intend to stick to the same offer templates going forwards. If not, a more generic model is probably more useful.
 
@@ -154,7 +154,7 @@ For example, let's imagine it costs £3.50 per person for marketing and each off
 
 (This is simplistic for sake of example, as in reality the channel mix for each offer would affect the costs and the offer types would likely drive different amounts of incremental spend)
 <p align="left">
-  <img width="800" height="200" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/modelling5.jpg?raw=true">
+  <img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/modelling5.jpg?raw=true">
 </p>
 
 So in this example it would make sense to try using the model.
