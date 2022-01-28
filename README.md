@@ -44,3 +44,10 @@ Here is the schema and explanation of each variable in the files:
 * person (str) - customer id
 * time (int) - time in hours since start of test. The data begins at time t=0
 * value - (dict of strings) - either an offer id or transaction amount depending on the record
+
+## Data Engineering Part 1
+The first interesting bit of data engineering I had to do was deal with a column which contained a dictionary. I split it out into separate columns and also used coalesce to combine two different spellings of the same thing.
+
+<p align="left">
+  <img width="460" height="300" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/data_engineering1.JPG?raw=true">
+</p>
