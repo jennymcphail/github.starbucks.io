@@ -54,4 +54,10 @@ The first interesting bit of data engineering I had to do was deal with a column
 Now I am able to look at metrics like offers per person and how many people received each offer.
 
 ## Analysis Visualisation Part 1
-Using mean told me that on average each person received 3.7 offers. But of course you can't receive 0.7 of an offer, so I also made a pie chart to visualise how many people received 1,2,3,4 etc. offers. I think this looks good as a pie chart showing 
+Using mean told me that on average each person received 3.7 offers. But of course you can't receive 0.7 of an offer, so I also made a pie chart to visualise how many people received 1,2,3,4 etc. offers. I think this looks good as a pie chart showing the percentage of people falling into each group and I also like a bit of white space to separate each slice of the pie!
+<p align="left">
+  <img width="1600" height="350" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation1.JPG?raw=true">
+</p>
+<p align="left">
+  <img width="1600" height="350" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation1a.jpg?raw=true">
+</p>
