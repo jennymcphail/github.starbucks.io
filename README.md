@@ -84,13 +84,12 @@ This snippet just shows the iterative chart creation, see my full code for the m
   <img width="800" height="200" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2.jpg?raw=true">
 </p>
 
-
-
-| | | |
-|:-------------------------:|:-------------------------:|:-------------------------:|
-|<img width="1604" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2a.jpg?raw=true"> |  <img width="1604"  src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2b.jpg?raw=true">|<img width="1604" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2c.jpg?raw=true">|
-|<img width="1604" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2d.jpg?raw=true">  |  <img width="1604"  src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2e.jpg?raw=true">|<img width="1604"  src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2f.jpg?raw=true">|
-
+<img width="1604" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2a.jpg?raw=true"> 
+<img width="1604"  src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2b.jpg?raw=true">
+<img width="1604" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2c.jpg?raw=true">
+<img width="1604" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2d.jpg?raw=true">
+<img width="1604"  src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2e.jpg?raw=true">
+<img width="1604"  src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2f.jpg?raw=true">
 
 From this we can see the following:
 - Each offer has a different journey profile - for example the fourth and sixth offers have not been completed at all
