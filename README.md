@@ -99,3 +99,8 @@ From this we can see the following:
 Looking at each factor in isolation is interesting but won't be the full picture - an offer's attractiveness will be a combination of its visibility, reward value, ease of completion and time available to complete.
 
 And individual customers will be more or less likely to complete based on their own circumstances too.
+
+## Modelling
+A model can take into consideration all the factors when trying to predict whether a customer will respond to a particular campaign.
+
+As the classes aren't too imbalanced, I made a basic Logistic Regression model (default parameters) as the baseline. Then I tried a basic Decision Tree (default parameters) to compare. For the best performer out of these, I built a pipeline and tuned some parameters to see if I could improve performance. Finally, I did a business evaluation to translate model performance into real life considerations of whether to use it.
