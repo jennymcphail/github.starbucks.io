@@ -49,17 +49,17 @@ Here is the schema and explanation of each variable in the files:
 The first interesting bit of data engineering I had to do was deal with a column which contained a dictionary. I split it out into separate columns and also used coalesce to combine two different spellings of the same thing.
 
 <p align="left">
-  <img width="1600" height="350" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/data_engineering1.JPG?raw=true">
+  <img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/data_engineering1.JPG?raw=true">
 </p>
 Now I am able to look at metrics like offers per person and how many people received each offer.
 
 ## Analysis Visualisation Part 1
 Using mean told me that on average each person received 3.7 offers. But of course you can't receive 0.7 of an offer, so I also made a pie chart to visualise how many people received 1,2,3,4 etc. offers. I think this looks good as a pie chart showing the percentage of people falling into each group and I also like a bit of white space to separate each slice of the pie!
 <p align="left">
-  <img width="1600" height="200" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation1.JPG?raw=true">
+  <img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation1.JPG?raw=true">
 </p>
 <p align="center">
-  <img width="600" height="600" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation1a.jpg?raw=true">
+  <img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation1a.jpg?raw=true">
 </p>
 Over two-thirds of people received 3 or 4 offers and the highest number received was 6. I also ran counts which showed roughly similar numbers of people received each offer (around 6,300).
 
@@ -72,7 +72,7 @@ What are the potential journeys that each customer could have when they receive 
 
 I turned my transcript dataframe into a journey one which maps these and counts how many customers have done each journey type (where 111 = Received, Viewed, Completed, 110 = Received, Viewed, Not Completed etc.)
 <p align="left">
-  <img width="1600" height="450" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/data_engineering2.jpg?raw=true">
+  <img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/data_engineering2.jpg?raw=true">
 </p>
 
 But I think you'll agree, this top level summary isn't very useful or informative.
@@ -81,15 +81,15 @@ But I think you'll agree, this top level summary isn't very useful or informativ
 I wrote an iterative process to create multiple stacked bar charts grouped by offer and also by each feature of an offer (e.g. channel, type, reward etc.)
 This snippet just shows the iterative chart creation, see my full code for the much longer code I used to prepare the data first.
 <p align="left">
-  <img width="800" height="200" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2.jpg?raw=true">
+  <img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2.jpg?raw=true">
 </p>
 
-<img width="1604" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2a.jpg?raw=true"> 
-<img width="1604"  src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2b.jpg?raw=true">
-<img width="1604" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2c.jpg?raw=true">
-<img width="1604" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2d.jpg?raw=true">
-<img width="1604"  src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2e.jpg?raw=true">
-<img width="1604"  src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2f.jpg?raw=true">
+<img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2a.jpg?raw=true"> 
+<img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2b.jpg?raw=true">
+<img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2c.jpg?raw=true">
+<img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2d.jpg?raw=true">
+<img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2e.jpg?raw=true">
+<img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2f.jpg?raw=true">
 
 From this we can see the following:
 - Each offer has a different journey profile - for example the fourth and sixth offers have not been completed at all
