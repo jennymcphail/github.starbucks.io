@@ -72,8 +72,31 @@ What are the potential journeys that each customer could have when they receive 
 
 I turned my transcript dataframe into a journey one which maps these and counts how many customers have done each journey type (where 111 = Received, Viewed, Completed, 110 = Received, Viewed, Not Completed etc.)
 <p align="left">
-  <img width="1600" height="350" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/data_engineering2.jpg?raw=true">
+  <img width="1600" height="450" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/data_engineering2.jpg?raw=true">
 </p>
 
 But I think you'll agree, this top level summary isn't very useful or informative.
 
+## Analysis Visualisation Part 2 (with a bit of iteration)
+I wrote an iterative process to create multiple stacked bar charts grouped by offer and also by each feature of an offer (e.g. channel, type, reward etc.)
+<p align="left">
+  <img width="1600" height="200" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2.JPG?raw=true">
+</p>
+
+| | | |
+|:-------------------------:|:-------------------------:|:-------------------------:|
+|<img width="1604" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2a.JPG?raw=true"> 
+|<img width="1604" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2b.JPG?raw=true">
+|<img width="1604" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2c.JPG?raw=true">|
+|<img width="1604" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2d.JPG?raw=true"> 
+|<img width="1604" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2e.JPG?raw=true">
+|<img width="1604" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2f.JPG?raw=true">  
+
+From this we can see the following:
+- Each offer has a different journey profile - for example the fourth and sixth offers have not been completed at all
+- If you look at "offer type", this explains it - they are "informational" so there is no expected action to complete
+- Looking at channel suggests that using social media seems to increase the likelihood of people viewing offers
+
+Looking at each factor in isolation is interesting but won't be the full picture - an offer's attractiveness will be a combination of its visibility, reward value, ease of completion and time available to complete.
+
+And individual customers will be more or less likely to complete based on their own circumstances too.
