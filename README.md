@@ -79,18 +79,18 @@ But I think you'll agree, this top level summary isn't very useful or informativ
 
 ## Analysis Visualisation Part 2 (with a bit of iteration)
 I wrote an iterative process to create multiple stacked bar charts grouped by offer and also by each feature of an offer (e.g. channel, type, reward etc.)
+This snippet just shows the iterative chart creation, see my full code for the much longer code I used to prepare the data first.
 <p align="left">
-  <img width="1600" height="200" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2.JPG?raw=true">
+  <img width="800" height="200" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2.jpg?raw=true">
 </p>
+
+
 
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
-|<img width="1604" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2a.JPG?raw=true"> 
-|<img width="1604" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2b.JPG?raw=true">
-|<img width="1604" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2c.JPG?raw=true">|
-|<img width="1604" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2d.JPG?raw=true"> 
-|<img width="1604" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2e.JPG?raw=true">
-|<img width="1604" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2f.JPG?raw=true">  
+|<img width="1604" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2a.jpg?raw=true"> |  <img width="1604"  src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2b.jpg?raw=true">|<img width="1604" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2c.jpg?raw=true">|
+|<img width="1604" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2d.jpg?raw=true">  |  <img width="1604"  src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2e.jpg?raw=true">|<img width="1604"  src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2f.jpg?raw=true">|
+
 
 From this we can see the following:
 - Each offer has a different journey profile - for example the fourth and sixth offers have not been completed at all
