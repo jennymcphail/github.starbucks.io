@@ -61,3 +61,19 @@ Using mean told me that on average each person received 3.7 offers. But of cours
 <p align="center">
   <img width="600" height="600" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation1a.jpg?raw=true">
 </p>
+Over two-thirds of people received 3 or 4 offers and the highest number received was 6. I also ran counts which showed roughly similar numbers of people received each offer (around 6,300).
+
+## Data Engineering Part 2
+What are the potential journeys that each customer could have when they receive an offer?
+- received, viewed, completed
+- received, viewed, not completed
+- received, not viewed, completed
+- received, not viewed, not completed
+
+I turned my transcript dataframe into a journey one which maps these and counts how many customers have done each journey type (where 111 = Received, Viewed, Completed, 110 = Received, Viewed, Not Completed etc.)
+<p align="left">
+  <img width="1600" height="350" src="https://github.com/jennymcphail/github.starbucks.io/blob/main/data_engineering2.jpg?raw=true">
+</p>
+
+But I think you'll agree, this top level summary isn't very useful or informative.
+
