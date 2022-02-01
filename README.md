@@ -199,6 +199,8 @@ A model can take into consideration all the factors when trying to predict wheth
 
 As the classes aren't too imbalanced, I made a basic Logistic Regression model (default parameters) as the baseline. Then I tried a basic Decision Tree (default parameters) to compare. For the best performer out of these, I built a pipeline and tuned some parameters to see if I could improve performance. Finally, I did a business evaluation to translate model performance into real life considerations of whether to use it.
 
+I used a two-thirds/one-third train/test split so that I had unseen data to evaulate my models on. As there isn't a feature importance output in LogisticRegression, I used the absolute coefficient by feature as a proxy to determine how much influence each feature is likely to have in the model.
+
 # Baseline model
 I didn't do anything exciting coding wise here for Logistic Regression, so the most important thing is the performance and feature ranking:
 <p align="left">
@@ -213,6 +215,8 @@ The Decision Tree turned out massively over-fitted to the training data:
 </p>
 
 ## 8) Refinement
+I used a pipeline to implement scaling to the LogisticRegression model (discarding DecisionTree due to training overfit). I also tested different values for C and different solvers using GridSearchCV.
+
 # Tuning
 <p align="left">
   <img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/modelling3.jpg?raw=true">
@@ -222,7 +226,7 @@ The scores have improved and the model is still performing equally well for trai
 
 ## 9) Model Evaluation and Validation
 
-# Additional Validation
+### Additional Validation
 
 As my data included all the offers in it, I wanted to check that it performs well across them all.
 <p align="left">
@@ -232,9 +236,8 @@ Fairly similar, although there might be an argument for building separate models
 
 ## 10) Justification
 
-## Real Life Model Application
-
-
+### Real Life Model Application
+As I mentioned before, I think a real marketing department would be less interested in accuracy scores and more interested in the monetary benefit in applying my model. So this is how I would go about creating a benefits sizing.
 
 For example, let's imagine it costs £3.50 per person for marketing and each offer is expected to increase customer spend by £7.50.
 
@@ -246,7 +249,7 @@ For example, let's imagine it costs £3.50 per person for marketing and each off
 So in this example it would make sense to try using the model.
 
 ## 11) Reflection
-Analysis and modelling are interesting on their own, but what would make this truly valuable would be a close working relationship with the marketing department to understand their goals and constraints and use Data Science to inform their strategy.
+Analysis and modelling are interesting on their own, but what would make this truly valuable would be a close working relationship with the marketing department to understand their goals and constraints and use Data Science to inform their strategy. It would be great to have the real marketing cost and incremental spend figures to calculate whether 0.7 accuracy is good enough to drive a benefit!
 
 ## 12) Improvement
 ### Taking it further
