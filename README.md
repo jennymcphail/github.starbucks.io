@@ -6,6 +6,14 @@
 ## How can Starbucks use data to inform their marketing strategy?
 
 ## Section 1) Project Overview
+This is my capstone project for the Udacity Data Science Nano Degree, using Starbucks data. This is a pretty open ended assignment for the final project in the course. I have chosen to do some detailed analysis, followed by a predictive model. I have also tried to apply "real world" thinking to add value to the Data Science by imagining what the Marketing Department in Starbucks might want to know and how they might use any model. 
+To try and demonstrate a breadth of learnings from my course, I have included:
+- Visualisations
+- Iterative processes
+- Data Engineering
+- Model building and evaluating
+- A pipeline
+- Model Tuning using GridSearch
 
 As my first "proper" job was in marketing, I was interested to see how campaign strategy could be influenced using data, using techniques I have learned during my Data Science Nano Degree.
 
@@ -88,7 +96,8 @@ This is a fairly straightforward dataset with one row per offer (10 in total) an
 </p>
 As I wanted to focus on the offers, I chose to strip out the transaction data. It would be interesting to come back and look at this more if I have time though! 
 I could also see that I would need to do some preprocessing on the dictionary "value" column in order to extract what offer each event related too.
-
+<p>
+</p>
 To sensecheck whether my plan to build a combined model for all offers was sensible, I also checked that each offer was received by a similar volume of customers and that each offer also had a similar profile of customers - otherwise my model could be skewed by one offer with unusual demographics.
 
 Volume of customers per offer:
@@ -103,8 +112,7 @@ Profiling example - age:
 
 
 ## 5) Data Visualisation
-Placeholder - put in offers per customer piechart and journeys
-## Analysis Visualisation Part 1
+### Offers per customer
 Using mean told me that on average each person received 3.7 offers. But of course you can't receive 0.7 of an offer, so I also made a pie chart to visualise how many people received 1,2,3,4 etc. offers. I think this looks good as a pie chart showing the percentage of people falling into each group and I also like a bit of white space to separate each slice of the pie!
 <p align="left">
   <img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation1.JPG?raw=true">
@@ -112,9 +120,28 @@ Using mean told me that on average each person received 3.7 offers. But of cours
 <p align="center">
   <img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation1a.jpg?raw=true">
 </p>
-Over two-thirds of people received 3 or 4 offers and the highest number received was 6. I also ran counts which showed roughly similar numbers of people received each offer (around 6,300).
+Over two-thirds of people received 3 or 4 offers and the highest number received was 6. 
 
-### Analysis Visualisation Part 2 (with a bit of iteration)
+### Offer Journeys
+What are the potential journeys that each customer could have when they receive an offer?
+- received, viewed, completed
+- received, viewed, not completed
+- received, not viewed, completed
+- received, not viewed, not completed
+
+I turned my transcript dataframe into a journey one which maps these and counts how many customers have done each journey type (where 111 = Received, Viewed, Completed, 110 = Received, Viewed, Not Completed etc.)
+<p align="left">
+  <img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/data_engineering2.jpg?raw=true">
+</p>
+
+But I think you'll agree, this top level summary isn't very useful or informative.
+
+I wrote an iterative process to create multiple stacked bar charts grouped by offer and also by each feature of an offer (e.g. channel, type, reward etc.)
+This snippet just shows the iterative chart creation, see my full code for the much longer code I used to prepare the data first.
+<p align="left">
+  <img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2.jpg?raw=true">
+</p>
+
 <img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2a.jpg?raw=true"> 
 <img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2b.jpg?raw=true">
 <img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2c.jpg?raw=true">
@@ -133,30 +160,36 @@ And individual customers will be more or less likely to complete based on their 
 
 ## 6) Data Preprocessing
 ### Data Engineering Part 1
-The first interesting bit of data engineering I had to do was deal with a column which contained a dictionary. I split it out into separate columns and also used coalesce to combine two different spellings of the same thing.
+The first interesting bit of data engineering I had to do was deal with the value column in the transcript data which contained a dictionary. I split it out into separate columns and also used coalesce to combine two different spellings of the same thing.
 
 <p align="left">
   <img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/data_engineering1.JPG?raw=true">
 </p>
 
-## Data Engineering Part 2
-What are the potential journeys that each customer could have when they receive an offer?
-- received, viewed, completed
-- received, viewed, not completed
-- received, not viewed, completed
-- received, not viewed, not completed
+### Data Engineering Part 2
+To create my journeys, I turned the offer events in the transcript data from rows into columns and from strings into binary values. This also meant I had created my target for my model, "offer completed" as a binary flag.
 
-I turned my transcript dataframe into a journey one which maps these and counts how many customers have done each journey type (where 111 = Received, Viewed, Completed, 110 = Received, Viewed, Not Completed etc.)
 <p align="left">
-  <img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/data_engineering2.jpg?raw=true">
+  <img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/data_engineering3.jpg?raw=true">
 </p>
 
-But I think you'll agree, this top level summary isn't very useful or informative.
-
-I wrote an iterative process to create multiple stacked bar charts grouped by offer and also by each feature of an offer (e.g. channel, type, reward etc.)
-This snippet just shows the iterative chart creation, see my full code for the much longer code I used to prepare the data first.
+### Data Engineering Part 3
+I merged the transcript data with the profile data to get the customer attributes, and grouped it up so I had one row per offer per customer.
 <p align="left">
-  <img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/visualisation2.jpg?raw=true">
+  <img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/data_engineering4.jpg?raw=true">
+</p>
+
+### Data Engineering Part 4
+Finally, I merged on the portfolio data so that I also had the offer attributes in my modelling data. 
+
+I did my final preparation work by:
+- dropping the rows which relate to informational offers as there's no completions for those
+- separating out the channels
+- using get dummies to convert text columns into binary flags
+- renaming columns to make them nicer/easier to use
+
+<p align="left">
+  <img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/data_engineering5.jpg?raw=true">
 </p>
 
 ## 7) Implementation
