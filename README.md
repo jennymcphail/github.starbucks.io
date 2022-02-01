@@ -72,20 +72,34 @@ To build our business case for using the model, I need the cost to market to eac
 ## 4) Data Exploration
 Udacity supplied basic code to read in the dat from the json files.
 
-**Portfolio**
+**Portfolio:**
 This is a fairly straightforward dataset with one row per offer (10 in total) and columns (6 in total) which describe the offer attributes. The only processing I felt it required was splitting the list of channels into separate columns so that my model could take into consideration individual channels as well as the combination.
-**Profile**
+
+**Profile:**
 17,000 rows each representing a customer - and 5 columns of customer attributes. There are just over 2k records where gender and income are not populated. I chose to drop these as they represent a fairly low proportion and none of the offers were disproportionately impacted by missing data.
 <p align="left">
   <img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/data_exploration1.jpg?raw=true">
 </p>
-**Transcript**
+
+**Transcript:**
 306,534 rows - each representing an event.
 <p align="left">
   <img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/data_exploration2.jpg?raw=true">
 </p>
 As I wanted to focus on the offers, I chose to strip out the transaction data. It would be interesting to come back and look at this more if I have time though! 
 I could also see that I would need to do some preprocessing on the dictionary "value" column in order to extract what offer each event related too.
+
+To sensecheck whether my plan to build a combined model for all offers was sensible, I also checked that each offer was received by a similar volume of customers and that each offer also had a similar profile of customers - otherwise my model could be skewed by one offer with unusual demographics.
+
+Volume of customers per offer:
+<p align="left">
+  <img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/data_exploration3.jpg?raw=true">
+</p>
+
+Profiling example - age:
+<p align="left">
+  <img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/data_exploration4.jpg?raw=true">
+</p>
 
 
 ## 5) Data Visualisation
