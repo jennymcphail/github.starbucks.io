@@ -5,7 +5,7 @@
 ### Nano Degree Capstone Project
 ## How can Starbucks use data to inform their marketing strategy?
 
-## Section 1) Project Overview
+## 1) Project Overview
 This is my capstone project for the Udacity Data Science Nano Degree, using Starbucks data. This is a pretty open ended assignment for the final project in the course. I have chosen to do some detailed analysis, followed by a predictive model. I have also tried to apply "real world" thinking to add value to the Data Science by imagining what the Marketing Department in Starbucks might want to know and how they might use any model. 
 To try and demonstrate a breadth of learnings from my course, I have included:
 - Visualisations
@@ -201,7 +201,7 @@ As the classes aren't too imbalanced, I made a basic Logistic Regression model (
 
 I used a two-thirds/one-third train/test split so that I had unseen data to evaulate my models on. As there isn't a feature importance output in LogisticRegression, I used the absolute coefficient by feature as a proxy to determine how much influence each feature is likely to have in the model.
 
-# Baseline model
+### Baseline model
 I didn't do anything exciting coding wise here for Logistic Regression, so the most important thing is the performance and feature ranking:
 <p align="left">
   <img  src="https://github.com/jennymcphail/github.starbucks.io/blob/main/modelling1.jpg?raw=true">
@@ -217,7 +217,7 @@ The Decision Tree turned out massively over-fitted to the training data:
 ## 8) Refinement
 I used a pipeline to implement scaling to the LogisticRegression model (discarding DecisionTree due to training overfit). I also tested different values for C and different solvers using GridSearchCV.
 
-# Tuning
+### Tuning
 <p align="left">
   <img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/modelling3.jpg?raw=true">
 </p>
