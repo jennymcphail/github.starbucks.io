@@ -77,12 +77,12 @@ This is a fairly straightforward dataset with one row per offer (10 in total) an
 **Profile**
 17,000 rows each representing a customer - and 5 columns of customer attributes. There are just over 2k records where gender and income are not populated. I chose to drop these as they represent a fairly low proportion and none of the offers were disproportionately impacted by missing data.
 <p align="left">
-  <img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/data_exploration1.JPG?raw=true">
+  <img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/data_exploration1.jpg?raw=true">
 </p>
 **Transcript**
 306,534 rows - each representing an event.
 <p align="left">
-  <img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/data_exploration2.JPG?raw=true">
+  <img src="https://github.com/jennymcphail/github.starbucks.io/blob/main/data_exploration2.jpg?raw=true">
 </p>
 As I wanted to focus on the offers, I chose to strip out the transaction data. It would be interesting to come back and look at this more if I have time though! 
 I could also see that I would need to do some preprocessing on the dictionary "value" column in order to extract what offer each event related too.
